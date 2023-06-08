@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SignInActivity"
+    android:background="#181A20"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/signup_slider_2_toolbar"
+        style="@style/toolbarStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/arrow_left" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        style="@style/topbarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/top_circle_2"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_regular"
+        android:text="@string/kisisel_bilgiler"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/signup_slider_2_image"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/pp_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_slider_2_toolbar" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signup_slider_2_image">
+
+        <EditText
+            android:id="@+id/ss2_ad"
+            android:hint="@string/ad"
+            android:inputType="textPersonName"
+            style="@style/editStyle"
+            android:imeOptions="actionNext"
+            />
+        <EditText
+            android:id="@+id/ss2_soyad"
+            android:hint="@string/soyad"
+            style="@style/editStyle"
+            android:inputType="textPersonName"
+            android:layout_marginTop="15dp"
+            android:imeOptions="actionNext"
+            />
+        <EditText
+            android:id="@+id/ss2_email"
+            android:hint="@string/mail_adresi"
+            style="@style/editStyle"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="15dp"
+            android:imeOptions="actionNext"
+            />
+        <EditText
+            android:inputType="phone"
+            android:id="@+id/ss2_tel"
+            android:hint="@string/telefon_numarasi"
+            style="@style/editStyle"
+            android:layout_marginTop="15dp"
+            android:imeOptions="actionNext"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/hint"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ss2_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle4"
+                android:inputType="textPassword"
+                style="@style/editStyle"
+                android:imeOptions="actionDone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/ss2_button"
+            style="@style/girisButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/ilerle" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

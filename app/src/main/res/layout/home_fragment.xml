@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    >
+
+    <EditText
+        android:id="@+id/homefragment_araedit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/home_search_background"
+        android:drawableStart="@drawable/home_search_icon"
+        android:drawablePadding="10dp"
+        android:hint="Ara"
+        android:inputType="text"
+        android:imeOptions="actionSearch"
+        android:paddingHorizontal="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homefragment_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/aradigin_esyayi_bul"
+        android:textColor="@color/white"
+
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homefragment_araedit" />
+
+    <LinearLayout
+        android:id="@+id/homefragment_kategorilinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homefragment_title">
+
+        <LinearLayout
+            android:id="@+id/homefragment_elektronik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homefragment_elektroniktext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Elektronik"
+                android:textSize="16sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/homefragment_elektroniknested"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#2BC990" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homefragment_mobilya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homefragment_mobilyatext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mobilya"
+                android:textSize="16sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/homefragment_mobilyanested"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#2BC990" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homefragment_giyim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homefragment_giyimtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Giyim"
+                android:textSize="16sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/homefragment_giyimnested"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#2BC990" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/homefragment_egitim"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homefragment_egitimtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Eğitim"
+                android:textSize="16sp" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/homefragment_egitimnested"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="5dp"
+                android:background="#2BC990" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homefragment_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/homefragment_ilanolustur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homefragment_kategorilinear" />
+
+    <TextView
+        android:id="@+id/homefragment_ilanolustur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="20dp"
+        android:drawableStart="@drawable/ilan_olustur_icon"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/ilan_olustur"
+        android:textColor="@color/color1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/home_fragment_tumunugor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:drawableEnd="@drawable/tumunu_gor_icon"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/tumunu_gor"
+        android:textColor="@color/color1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
